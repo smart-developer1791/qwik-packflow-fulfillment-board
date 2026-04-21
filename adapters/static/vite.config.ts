@@ -12,7 +12,9 @@ export default extendConfig(baseConfig, () => {
     },
     plugins: [
       staticAdapter({
-        origin: process.env.SITE_URL ?? "https://packflow-demo.netlify.app",
+        origin:
+          process.env.SITE_URL ??
+          "https://qwik-packflow-fulfillment-board.netlify.app",
       }),
     ],
   };

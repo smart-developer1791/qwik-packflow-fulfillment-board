@@ -114,6 +114,10 @@ npm run preview
 3. Build settings are auto-configured via `netlify.toml`
 4. Deploy
 
+### 🔗 Static Adapter Origin
+
+Before publishing a cloned or renamed deployment, update the fallback `origin` in `adapters/static/vite.config.ts`. Qwik City's static adapter uses this URL for generated static metadata such as sitemap and route data. The current fallback points to `https://qwik-packflow-fulfillment-board.netlify.app`, and it can still be overridden with the `SITE_URL` environment variable.
+
 ### ⚠️ Node and Undici Note
 
 Qwik City uses `undici` during build and preview work. `undici` tracks modern Node Web API support closely, so newer `undici` releases can require newer Node versions. If this project keeps `undici` floating with `"undici": "*"`, keep Netlify and CI on a fresh Node version; newer Node is the safer default. The included `netlify.toml` sets the build runtime explicitly for that reason.
