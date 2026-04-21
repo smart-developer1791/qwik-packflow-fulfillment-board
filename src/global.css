@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --yard: #f4ead8;
+  --paper: #fff9ee;
+  --ink: #101923;
+  --cargo: #d96c2f;
+  --reef: #4d8277;
+  --sky: #9dc5ce;
+  --danger: #b94e3d;
+  --chalk: #ebe0ca;
+}
+
+@theme inline {
+  --font-sans: "Bricolage Grotesque", sans-serif;
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --color-yard: var(--yard);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-cargo: var(--cargo);
+  --color-reef: var(--reef);
+  --color-sky: var(--sky);
+  --color-danger: var(--danger);
+  --color-chalk: var(--chalk);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--yard);
+  color: var(--ink);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at 8% 12%,
+      rgba(217, 108, 47, 0.26),
+      transparent 24rem
+    ),
+    radial-gradient(
+      circle at 88% 18%,
+      rgba(77, 130, 119, 0.22),
+      transparent 26rem
+    ),
+    radial-gradient(
+      circle at 76% 86%,
+      rgba(157, 197, 206, 0.28),
+      transparent 30rem
+    ),
+    linear-gradient(90deg, rgba(16, 25, 35, 0.055) 1px, transparent 1px),
+    linear-gradient(rgba(16, 25, 35, 0.055) 1px, transparent 1px), var(--yard);
+  background-size:
+    auto,
+    auto,
+    auto,
+    52px 52px,
+    52px 52px,
+    auto;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+.floor-hero,
+.dispatch-board {
+  isolation: isolate;
+}
+
+.floor-hero::before {
+  content: "";
+  position: absolute;
+  top: -18rem;
+  right: -7rem;
+  width: min(46rem, 72vw);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(217, 108, 47, 0.28), transparent 62%),
+    radial-gradient(
+      circle at 40% 35%,
+      rgba(157, 197, 206, 0.18),
+      transparent 48%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floor-hero::after {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 1px solid rgba(255, 249, 238, 0.1);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.route-map {
+  position: relative;
+}
+
+.route-map::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border-radius: 1.5rem;
+  background:
+    linear-gradient(
+      135deg,
+      transparent 0 42%,
+      rgba(217, 108, 47, 0.26) 42% 48%,
+      transparent 48%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 0 62%,
+      rgba(157, 197, 206, 0.2) 62% 68%,
+      transparent 68%
+    );
+  pointer-events: none;
+}
+
+.dispatch-board::before {
+  content: "";
+  position: absolute;
+  left: -10rem;
+  bottom: 12rem;
+  width: min(42rem, 74vw);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(157, 197, 206, 0.22), transparent 64%),
+    radial-gradient(
+      circle at 62% 48%,
+      rgba(217, 108, 47, 0.16),
+      transparent 44%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.notch-note {
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.belt-strip {
+  position: relative;
+}
+
+.belt-strip::before {
+  content: "";
+  position: absolute;
+  inset: 0.75rem;
+  border-radius: 1.5rem;
+  border: 1px dashed rgba(255, 249, 238, 0.12);
+  pointer-events: none;
+}
+
+.ticket-card {
+  position: relative;
+}
+
+.ticket-card::before {
+  content: "";
+  position: absolute;
+  top: -0.55rem;
+  left: 1.2rem;
+  right: 1.2rem;
+  height: 0.7rem;
+  border: 1px solid var(--ink);
+  border-bottom: 0;
+  border-radius: 1rem 1rem 0 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(16, 25, 35, 0.18),
+      rgba(16, 25, 35, 0.18) 8px,
+      transparent 8px,
+      transparent 16px
+    ),
+    var(--cargo);
+}

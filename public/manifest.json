@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "Packflow Fulfillment Board",
+  "short_name": "Packflow",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f4ead8",
+  "theme_color": "#101923",
+  "description": "Static Qwik fulfillment board with optimistic packing tickets and retryable mock carrier sync."
+}
